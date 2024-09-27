@@ -8,158 +8,126 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_header"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Tip Calculator"
-        android:textSize="26sp"
+        android:layout_margin="16dp"
+        android:text="Tips Calculator"
+        android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_total_factura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="48dp"
-        android:text="Ingrese el total de la factura"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/tv_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="80dp"
+        android:layout_margin="16dp"
+        android:text="Rellene los campos siguientes para calcular su factura"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_total_factura">
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_factura_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ej: 112.63"
-            android:inputType="numberDecimal"
-            android:maxLength="7" />
+            android:hint="Introduzca el valor total de su cuenta"
+            android:inputType="number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_eligir_propina"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_number_of_people"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:text="Elegir propina"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/radioGroup"
+        android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/til_total">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduzca el número de personas en la mesa"
+            android:inputType="numberDecimal"
+            android:maxLength="2">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:id="@+id/rg_percentage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/tv_personas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_eligir_propina">
+        app:layout_constraintEnd_toEndOf="@+id/til_number_of_people"
+        app:layout_constraintStart_toStartOf="@+id/til_number_of_people"
+        app:layout_constraintTop_toBottomOf="@+id/til_number_of_people">
 
         <RadioButton
-            android:id="@+id/radio_10"
+            android:id="@+id/rb_option_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:backgroundTint="@color/pinkwhite"
-            android:text="10%"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_eligir_propina" />
+            android:text="10%" />
 
         <RadioButton
-            android:id="@+id/radio_15"
+            android:id="@+id/rb_option_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:backgroundTint="@color/pinkwhite"
-            android:text="15%"
-            app:layout_constraintEnd_toStartOf="@+id/btn_20"
-            app:layout_constraintStart_toEndOf="@+id/btn_10"
-            app:layout_constraintTop_toBottomOf="@+id/tv_eligir_propina" />
+            android:text="15%" />
 
         <RadioButton
-            android:id="@+id/radio_20"
+            android:id="@+id/rb_option_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:backgroundTint="@color/pinkwhite"
-            android:text="20%"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_eligir_propina" />
+            android:text="20%" />
 
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/tv_personas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:text="Personas"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_personas">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_personas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ej: 4"
-            android:inputType="number"
-            android:maxLength="3" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/btn_calcular"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="80dp"
-        android:backgroundTint="@color/pinkwhite"
-        android:text="Calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
-
-    <Button
-        android:id="@+id/btn_limpiar"
-        android:layout_width="160dp"
+        android:id="@+id/btn_clean"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/pinkwhite"
+        android:layout_marginEnd="4dp"
         android:text="Limpiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_calcular" />
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/til_number_of_people"
+        app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/til_number_of_people"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
