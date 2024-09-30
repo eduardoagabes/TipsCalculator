@@ -96,9 +96,8 @@ class MainActivity : AppCompatActivity() {
             binding.btnClean.setOnClickListener {
                 binding.tvResult.text = ""
                 binding.tieTotal.setText("")
-                binding.rbOptionOne.isChecked = false
-                binding.rbOptionTwo.isChecked = false
-                binding.rbOptionThree.isChecked = false
+                binding.rgPercentage.clearCheck()
+                binding.spinnerNumberOfPeople.setSelection(0)
             }
         }
     }
