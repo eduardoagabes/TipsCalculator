@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/sage"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Tips Calculator"
-        android:textSize="32sp"
+        android:textColor="@color/greenblack"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,8 +24,11 @@
         android:id="@+id/tv_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
         android:text="Rellene los campos siguientes para calcular su factura"
+        android:textColor="@color/greenblack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +38,15 @@
         android:id="@+id/til_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:cursorColor="@color/greenblack"
+        android:layout_marginEnd="16dp"
+        android:background="@color/green"
+        android:textColorHint="@color/pastel"
+        app:boxStrokeColor="@color/greenblack"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/greenblack"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -43,7 +54,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Introduzca el valor total de su cuenta"
-            android:inputType="number">
+            android:inputType="numberDecimal"
+            android:textColorHighlight="@color/greenblack"
+            android:textColor="@color/greenblack"
+            android:textColorHint="@color/pastel">
 
         </com.google.android.material.textfield.TextInputEditText>
 
@@ -54,10 +68,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_total" />
-
 
     <RadioGroup
         android:id="@+id/rg_percentage"
@@ -76,19 +90,25 @@
             android:id="@+id/rb_option_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%" />
+            android:textStyle="bold"
+            android:text="10%"
+            android:textColor="@color/greenblack" />
 
         <RadioButton
             android:id="@+id/rb_option_two"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%" />
+            android:text="15%"
+            android:textColor="@color/greenblack" />
 
         <RadioButton
             android:id="@+id/rb_option_three"
             android:layout_width="wrap_content"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:text="20%" />
+            android:text="20%"
+            android:textColor="@color/greenblack" />
 
     </RadioGroup>
 
@@ -98,7 +118,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/summer"
         android:text="Limpiar"
+        android:textColor="@color/greenblack"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/spinner_number_of_people"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
@@ -116,20 +138,98 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/greenblack"
         android:text="Calcular"
+        android:textColor="@color/sage"
         app:layout_constraintEnd_toEndOf="@+id/spinner_number_of_people"
         app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_result"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        tools:layout_editor_absoluteX="40dp">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/greenblack"
         android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/label_total_personas"
+        app:layout_constraintStart_toStartOf="@+id/label_total_personas"
+        app:layout_constraintTop_toBottomOf="@+id/label_total_personas"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/label_total_personas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total por persona"
+        android:textColor="@color/pastel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_result" />
+
+    <TextView
+        android:id="@+id/label_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Factura"
+        android:textColor="@color/pastel"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+    <TextView
+        android:id="@+id/tv_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/greenblack"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/label_factura"
+        app:layout_constraintStart_toStartOf="@+id/label_factura"
+        app:layout_constraintTop_toBottomOf="@+id/label_factura"
         tools:text="0" />
+
+    <TextView
+        android:id="@+id/label_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Propina"
+        android:textColor="@color/pastel"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_result"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greenblack"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/label_tip"
+        app:layout_constraintStart_toStartOf="@+id/label_tip"
+        app:layout_constraintTop_toBottomOf="@+id/label_tip"
+        tools:text="0" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.eduardoagabes.tipscalculator.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import java.text.NumberFormat
+import java.util.Locale
 
 
 class MainActivity : AppCompatActivity() {
@@ -90,11 +92,21 @@ class MainActivity : AppCompatActivity() {
                 val totalTemp = totalTable / nPeople
                 val tips = (totalTemp * percentage) / 100
                 val totalWhitTips = totalTemp + tips
-                binding.tvResult.text = "Total con propina: $totalWhitTips"
+
+                val formattedResult = NumberFormat.getCurrencyInstance(Locale("es", "ES")).format(totalWhitTips)
+                val formattedFactura = NumberFormat.getCurrencyInstance(Locale("es", "ES")).format(totalTable)
+                val formattedTips= NumberFormat.getCurrencyInstance(Locale("es", "ES")).format(tips)
+
+                binding.tvResult.text = formattedResult
+                binding.tvFactura.text = formattedFactura
+                binding.tvTip.text = formattedTips
+
             }
 
             binding.btnClean.setOnClickListener {
                 binding.tvResult.text = ""
+                binding.tvFactura.text = ""
+                binding.tvTip.text = ""
                 binding.tieTotal.setText("")
                 binding.rgPercentage.clearCheck()
                 binding.spinnerNumberOfPeople.setSelection(0)
