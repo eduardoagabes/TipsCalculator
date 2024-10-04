@@ -12,8 +12,8 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Tips Calculator"
+        android:layout_margin="24dp"
+        android:text="@string/tips_calculator"
         android:textColor="@color/greenblack"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -27,8 +27,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:text="Rellene los campos siguientes para calcular su factura"
-        android:textColor="@color/greenblack"
+        android:text="@string/rellene_los_campos_siguientes_para_calcular_su_factura"
+        android:textColor="#33691E"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +53,11 @@
             android:id="@+id/tie_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduzca el valor total de su cuenta"
+            android:hint="@string/introduzca_el_valor_total_de_su_cuenta"
             android:inputType="numberDecimal"
             android:textColor="@color/greenblack"
             android:textColorHighlight="@color/greenblack"
-            android:textColorHint="@color/pastel">
+            android:textColorHint="@color/pastel" >
 
         </com.google.android.material.textfield.TextInputEditText>
 
@@ -90,7 +90,7 @@
             android:id="@+id/rb_option_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%"
+            android:text="@string/_10"
             android:textColor="@color/greenblack"
             android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
             android:id="@+id/rb_option_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%"
+            android:text="@string/_15"
             android:textColor="@color/greenblack"
             android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
             android:id="@+id/rb_option_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%"
+            android:text="@string/_20"
             android:textColor="@color/greenblack"
             android:textStyle="bold" />
 
@@ -119,8 +119,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="@color/summer"
-        android:text="Limpiar"
-        android:textColor="@color/greenblack"
+        android:text="@string/limpiar"
+        android:textColor="#1B5E20"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/spinner_number_of_people"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
@@ -139,8 +139,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/greenblack"
-        android:text="Calcular"
-        android:textColor="@color/sage"
+        android:text="@string/calcular"
+        android:textColor="#F9FBE7"
         app:layout_constraintEnd_toEndOf="@+id/spinner_number_of_people"
         app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
@@ -150,13 +150,14 @@
         android:id="@+id/linearLayout_result"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/rounded_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
-        tools:layout_editor_absoluteX="40dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean">
 
     </LinearLayout>
 
@@ -178,8 +179,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Total por persona"
-        android:textColor="@color/pastel"
+        android:text="@string/total_por_persona"
+        android:textColor="#33691E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout_result" />
@@ -189,8 +190,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Factura"
-        android:textColor="@color/pastel"
+        android:text="@string/factura"
+        android:textColor="#33691E"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/linearLayout_result"
         app:layout_constraintTop_toBottomOf="@+id/tv_result" />
@@ -212,8 +213,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Propina"
-        android:textColor="@color/pastel"
+        android:text="@string/propina"
+        android:textColor="#33691E"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout_result"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/tv_result" />
