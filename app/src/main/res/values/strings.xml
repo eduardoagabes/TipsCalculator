@@ -1,69 +1,16 @@
 <resources>
     <string name="app_name">TipsCalculator</string>
-    <string name="calcular">Calcular</string>
-    <string name="limpiar">Limpiar</string>
-    <string name="factura">Factura</string>
-    <string name="propina">Propina</string>
-    <string name="total_por_persona">Total por persona</string>
-    <string name="_10">10%</string>
-    <string name="_20">20%</string>
-    <string name="_15">15%</string>
-    <string name="introduzca_el_valor_total_de_su_cuenta">Introduzca el valor total de su cuenta</string>
     <string name="rellene_los_campos_siguientes_para_calcular_su_factura">Rellene los campos siguientes para calcular su factura</string>
-    <string name="tips_calculator">Tips Calculator</string>
-    <string-array name="num_people">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
-        <item>26</item>
-        <item>27</item>
-        <item>28</item>
-        <item>29</item>
-        <item>30</item>
-        <item>31</item>
-        <item>32</item>
-        <item>33</item>
-        <item>34</item>
-        <item>35</item>
-        <item>36</item>
-        <item>37</item>
-        <item>38</item>
-        <item>39</item>
-        <item>40</item>
-        <item>41</item>
-        <item>42</item>
-        <item>43</item>
-        <item>44</item>
-        <item>45</item>
-        <item>46</item>
-        <item>47</item>
-        <item>48</item>
-        <item>49</item>
-        <item>50</item>
-
-
-    </string-array>
+    <string name="total_de_la_factura">Total de la factura:</string>
+    <string name="ej_250_00">Ej: € 250.00</string>
+    <string name="n_mero_de_personas">Número de personas</string>
+    <string name="ej_4">Ej: 4</string>
+    <string name="percentaje_de_propina">Percentaje de propina:</string>
+    <string name="ej_10">Ex: 10%</string>
+    <string name="limpiar">Limpiar </string>
+    <string name="calcular">Calcular </string>
+    <string name="resumen">Resumen</string>
+    <string name="vea_el_resumen_de_su_cuenta_a_continuaci_n">Vea el resumen de su cuenta a continuación</string>
+    <string name="total" translatable="false">TOTAL:</string>
+    <string name="inicio" translatable="false">Inicio</string>
 </resources>

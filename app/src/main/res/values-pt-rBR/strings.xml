@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TipsCalculator</string>
+    <string name="rellene_los_campos_siguientes_para_calcular_su_factura">Preencha os seguintes campos para calcular sua fatura</string>
+    <string name="total_de_la_factura">Total da conta:</string>
+    <string name="ej_250_00">Ex: R$ 250.00</string>
+    <string name="n_mero_de_personas">Número de pessoas</string>
+    <string name="ej_4">Ex: 4</string>
+    <string name="percentaje_de_propina">Porcentagem de gorjeta:</string>
+    <string name="ej_10">Ex: 10%</string>
+    <string name="limpiar">Limpar</string>
+    <string name="calcular">Calcular</string>
+    <string name="resumen">Resumo</string>
+    <string name="vea_el_resumen_de_su_cuenta_a_continuaci_n">"Veja o resumo da sua conta abaixo "</string>
+    <string name="total">TOTAL:</string>
+    <string name="inicio">Início</string>
+</resources>

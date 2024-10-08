@@ -2,8 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TipsCalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/greenblack</item>
     </style>
 
     <style name="Theme.TipsCalculator" parent="Base.Theme.TipsCalculator" />
+
+    <style name="Title" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
