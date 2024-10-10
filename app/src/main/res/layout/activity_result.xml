@@ -48,7 +48,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_total_table_label"
-        tools:text="€ 250,00" />
+        tools:text="250,00" />
 
     <TextView
         android:id="@+id/tv_num_people_label"
@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/inicio"
+        android:text="@string/rehacer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

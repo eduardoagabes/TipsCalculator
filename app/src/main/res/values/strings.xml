@@ -6,11 +6,11 @@
     <string name="n_mero_de_personas">Número de personas</string>
     <string name="ej_4">Ej: 4</string>
     <string name="percentaje_de_propina">Percentaje de propina:</string>
-    <string name="ej_10">Ex: 10%</string>
+    <string name="ej_10">Ej: 10%</string>
     <string name="limpiar">Limpiar </string>
     <string name="calcular">Calcular </string>
     <string name="resumen">Resumen</string>
     <string name="vea_el_resumen_de_su_cuenta_a_continuaci_n">Vea el resumen de su cuenta a continuación</string>
     <string name="total" translatable="false">TOTAL:</string>
-    <string name="inicio" translatable="false">Inicio</string>
+    <string name="rehacer">Rehacer</string>
 </resources>
